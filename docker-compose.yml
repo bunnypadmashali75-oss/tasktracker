@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: taskapp-mongo
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: taskapp-server
+    restart: unless-stopped
+    env_file:
+      - ./server/.env
+    ports:
+      - '5000:5000'
+    depends_on:
+      - mongo
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: taskapp-client
+    restart: unless-stopped
+    env_file:
+      - ./client/.env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - server
+volumes:
+  mongo-data:
+    driver: local

@@ -1,0 +1,50 @@
+{
+  "name": "taskapp-client",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint './src/**/*.{ts,tsx}' --fix",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.10",
+    "@heroicons/react": "^2.0.18",
+    "@tanstack/react-query": "^5.0.0",
+    "@tanstack/react-query-devtools": "^5.0.0",
+    "axios": "^1.5.1",
+    "framer-motion": "^11.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.57.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.17.0",
+    "socket.io-client": "^4.7.0",
+    "zustand": "^4.4.0",
+    "zod": "^3.23.2"
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^3.4.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.37",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1",
+    "vitest": "^4.1.7",
+    "jsdom": "^22.1.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0"
+  }
+}
